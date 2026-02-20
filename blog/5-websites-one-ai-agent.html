@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How I Run 5 Websites With One AI Agent | OpenClaw SA Case Study</title>
+  <meta name="description" content="The exact automations, cron schedules, and workflows running 24/7 on a Mac mini in Cape Town — managing 5 affiliate websites while working a full-time job.">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    .post-header { padding: 60px 0 40px; border-bottom: 1px solid var(--border); margin-bottom: 40px; }
+    .post-tag { display: inline-block; background: #ede9fe; color: #5b21b6; font-size: 0.72rem; font-weight: 700; padding: 4px 12px; border-radius: 100px; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 16px; }
+    .post-title { font-size: 2.4rem; font-weight: 900; line-height: 1.2; margin-bottom: 16px; }
+    .post-meta { font-size: 0.85rem; color: var(--text3); }
+    .post-body { font-size: 1.05rem; line-height: 1.85; color: var(--text2); }
+    .post-body h2 { font-size: 1.5rem; font-weight: 800; color: var(--text); margin: 40px 0 14px; }
+    .post-body h3 { font-size: 1.15rem; font-weight: 700; color: var(--text); margin: 28px 0 10px; }
+    .post-body p { margin-bottom: 20px; }
+    .post-body ul, .post-body ol { padding-left: 24px; margin-bottom: 20px; }
+    .post-body li { margin-bottom: 10px; }
+    .post-body strong { color: var(--text); }
+    .post-body a { color: var(--accent); }
+    .callout { background: #f0fdf4; border-left: 4px solid var(--green); border-radius: 0 8px 8px 0; padding: 18px 20px; margin: 28px 0; }
+    .callout p { margin: 0; color: var(--text); }
+    .cron-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 0.875rem; }
+    .cron-table th { background: var(--bg3); padding: 10px 14px; text-align: left; font-weight: 700; font-size: 0.78rem; color: var(--text2); }
+    .cron-table td { padding: 12px 14px; border-bottom: 1px solid var(--border); color: var(--text2); }
+    .cron-table tr:last-child td { border-bottom: none; }
+    .status-ok { display: inline-block; width: 8px; height: 8px; background: var(--green); border-radius: 50%; margin-right: 6px; }
+    .post-nav { border-top: 1px solid var(--border); padding-top: 32px; margin-top: 48px; display: flex; justify-content: space-between; }
+    .post-nav a { font-weight: 700; font-size: 0.9rem; }
+    .sites-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 24px 0; }
+    .site-chip { background: var(--bg3); border: 1px solid var(--border); border-radius: 10px; padding: 14px; }
+    .site-chip .s-name { font-weight: 800; color: var(--text); font-size: 0.9rem; }
+    .site-chip .s-desc { font-size: 0.78rem; color: var(--text2); margin-top: 4px; }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="/" class="brand">
+          <span style="font-size:1.5rem;">🦞</span>
+          <span class="brand-name">OpenClaw SA</span>
+          <span class="brand-tag">South Africa</span>
+        </a>
+        <nav class="header-nav">
+          <a href="/use-cases.html" class="nav-link">Use Cases</a>
+          <a href="/guides.html" class="nav-link">Guides</a>
+          <a href="/blog/index.html" class="nav-link">Blog</a>
+          <a href="/get-started.html" class="nav-cta">Get Started →</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container-sm">
+      <div class="post-header">
+        <div class="post-tag">📊 Case Study</div>
+        <h1 class="post-title">How I Run 5 Websites With One AI Agent (While Working a Full-Time Job)</h1>
+        <div class="post-meta">February 20, 2026 · 8 min read · by Brandon Katz, Cape Town</div>
+      </div>
+
+      <div class="post-body">
+        <p>I work full-time as a social media manager. I have a wife, two kids, and a weights routine I refuse to sacrifice. There's no version of reality where I manually manage 5 websites, write multiple blog posts a week, track live sports odds, monitor Reddit, analyse analytics, and generate daily social content.</p>
+
+        <p>And yet — all of that happens. Every day. Automatically. On a Mac mini that sits next to my router.</p>
+
+        <p>This is the exact setup.</p>
+
+        <h2>The 5 sites</h2>
+        <div class="sites-grid">
+          <div class="site-chip"><div class="s-name">BetSorted.co.za</div><div class="s-desc">SA sports betting comparison. Live PSL odds, bookmaker reviews.</div></div>
+          <div class="site-chip"><div class="s-name">CryptoCasinoSorted.com</div><div class="s-desc">Crypto casino comparison with live on-chain deposit tracking.</div></div>
+          <div class="site-chip"><div class="s-name">RetirementSorted.co.za</div><div class="s-desc">SA retirement planning tools and calculators.</div></div>
+          <div class="site-chip"><div class="s-name">PaidProperly.co.za</div><div class="s-desc">Remote work guides for South Africans earning in foreign currency.</div></div>
+        </div>
+        <p>Each site needs fresh content, SEO maintenance, affiliate link management, social media content, and performance tracking. That's realistically 3-4 hours per site per week if done manually. I have about 4 hours a week total.</p>
+        <p>OpenClaw fills the gap.</p>
+
+        <h2>The hardware</h2>
+        <p><strong>Mac mini M4 (~R15,000)</strong> — runs 24/7, uses about as much electricity as a lightbulb, survives load shedding on a small UPS. OpenClaw runs as a daemon in the background. I interact with it via Telegram from my phone.</p>
+
+        <div class="callout">
+          <p>💡 You can also run OpenClaw in the cloud via <strong>Ampere.sh</strong> if you don't want dedicated hardware. About $20/month, no Mac required.</p>
+        </div>
+
+        <h2>The daily automations (cron jobs)</h2>
+        <p>These run on a schedule without any input from me:</p>
+
+        <table class="cron-table">
+          <thead>
+            <tr><th>Time</th><th>Job</th><th>What it does</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Midnight</td><td>SEO Content Build</td><td>Researches trending topics, writes 2,000-word articles for BetSorted + CryptoCasino, commits and pushes to GitHub</td></tr>
+            <tr><td>2 AM</td><td>Reddit Opportunities</td><td>Scans crypto gambling and SA money subreddits for high-engagement threads to engage with</td></tr>
+            <tr><td>2 AM</td><td>Crypto Casino Deposits</td><td>Exports on-chain Ethereum deposits from 7 casino wallets to CSV</td></tr>
+            <tr><td>6 AM</td><td>Live Odds Update</td><td>Fetches latest PSL + rugby odds via API, updates BetSorted homepage</td></tr>
+            <tr><td>6 AM</td><td>Analytics Report</td><td>Pulls Google Analytics for all 5 sites, formats into clean summary, sends to my Telegram</td></tr>
+            <tr><td>6:15 AM</td><td>Tweet Generator</td><td>Generates 3 tweets + 1 reply option for BetSorted and CryptoCasino based on live data</td></tr>
+            <tr><td>7 AM</td><td>Morning Report</td><td>Full overnight summary: what ran, what errored, tasks for today, SEO opportunities</td></tr>
+            <tr><td>6 PM</td><td>Evening Odds Update</td><td>Second daily odds refresh</td></tr>
+          </tbody>
+        </table>
+
+        <p>Plus weekly jobs: blog posts for RetirementSorted (Thursday), PaidProperly (Friday), SEO content for CryptoCasino (Monday), BetSorted (Wednesday).</p>
+
+        <h2>What I actually do manually</h2>
+        <p>Less than you'd think. My actual daily involvement is:</p>
+        <ul>
+          <li>Read the 7 AM morning report (2 minutes)</li>
+          <li>Review and post the generated tweets (5 minutes)</li>
+          <li>Make strategic decisions — which new tool to build, which affiliate to apply to, what to prioritise (30 minutes, a few times a week)</li>
+        </ul>
+        <p>Everything else runs. The agent handles execution. I handle direction.</p>
+
+        <h2>What it's cost so far</h2>
+        <ul>
+          <li><strong>Mac mini M4:</strong> ~R15,000 (once-off)</li>
+          <li><strong>AI credits (Claude/GPT):</strong> ~R400/month</li>
+          <li><strong>Hosting:</strong> R0 (GitHub Pages)</li>
+          <li><strong>Domains:</strong> ~R200/month total</li>
+          <li><strong>APIs:</strong> ~R150/month (odds, analytics, blockchain)</li>
+        </ul>
+        <p><strong>Total running cost: ~R750/month.</strong> For infrastructure that would require at least 2-3 part-time employees to replicate manually.</p>
+
+        <h2>The honest limitations</h2>
+        <p>It's not magic and it's not perfect. A few things to know:</p>
+        <ul>
+          <li><strong>Setup takes time.</strong> Building the first automations took about 2 weekends. It gets faster, but the initial investment is real.</li>
+          <li><strong>It makes mistakes.</strong> Sometimes a blog post is mediocre. Sometimes a cron job errors. You still need to review output, especially at first.</li>
+          <li><strong>It needs direction.</strong> OpenClaw doesn't decide strategy. You still need to tell it what to do and where to focus. Think manager, not replacement.</li>
+        </ul>
+
+        <h2>Should you build this?</h2>
+        <p>If you have recurring tasks that happen every week — yes. If everything you do is bespoke and relationship-driven — probably not yet.</p>
+        <p>The sweet spot is businesses that have predictable, repeatable workflows: reporting, content creation, monitoring, data aggregation, client communications. If any of that applies to you, OpenClaw is worth a weekend of your time.</p>
+
+        <p><a href="/get-started.html">Here's where to start →</a></p>
+
+        <div class="post-nav">
+          <a href="/blog/index.html">← All posts</a>
+          <a href="/blog/openclaw-for-beginners.html">Beginner guide →</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <div class="footer-brand">🦞 OpenClaw SA</div>
+          <div class="footer-copy" style="margin-top:4px;">An independent resource for South African businesses. Not affiliated with OpenClaw or OpenAI.</div>
+        </div>
+        <div class="footer-links">
+          <a href="/blog/index.html">Blog</a>
+          <a href="/use-cases.html">Use Cases</a>
+          <a href="https://openclaw.ai" target="_blank" rel="noopener">OpenClaw ↗</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
