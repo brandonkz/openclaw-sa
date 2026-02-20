@@ -1,0 +1,202 @@
+{
+  "last_updated": "2026-02-20",
+  "source": "Twitter/X, OpenClaw showcase, ClawIndex, Reddit, community research",
+
+  "ecosystem_stats": {
+    "github_stars": "135,000+",
+    "clawhub_skills": 3286,
+    "clawhub_downloads": "1.5M+",
+    "clawindex_projects": 245,
+    "messaging_platforms": 12
+  },
+
+  "community_tools": [
+    {
+      "name": "Supermemory",
+      "type": "Memory",
+      "what": "Gives OpenClaw unlimited long-term memory. Store and retrieve anything across all conversations.",
+      "url": "https://github.com/supermemoryai/clawdbot-supermemory",
+      "source": "Twitter (@milesdeutscher)"
+    },
+    {
+      "name": "QMD Skill",
+      "type": "Optimization",
+      "what": "Cuts token usage by 95% — dramatically reduces AI API costs while maintaining quality.",
+      "url": "https://github.com/levineam/qmd-skill",
+      "source": "Twitter (@milesdeutscher)"
+    },
+    {
+      "name": "Phone Booth",
+      "type": "Communication",
+      "what": "Lets your OpenClaw agent make and receive phone calls on your behalf.",
+      "source": "Twitter (@0xSammy ClawIndex roundup)"
+    },
+    {
+      "name": "Beeper / Texts.blog",
+      "type": "Messaging",
+      "what": "Connect OpenClaw to all your messaging apps through one unified inbox (iMessage, Instagram DMs, etc).",
+      "source": "Twitter (@steipete)"
+    },
+    {
+      "name": "1Password Skill",
+      "type": "Security",
+      "what": "Give OpenClaw its own secure vault — read and write passwords and secrets safely.",
+      "source": "Twitter (OpenClaw showcase)"
+    },
+    {
+      "name": "Homey Integration",
+      "type": "Smart Home",
+      "what": "Control your smart home — lights, temperature, locks — through OpenClaw via WhatsApp or Telegram.",
+      "source": "Twitter (@steipete)"
+    },
+    {
+      "name": "WHOOP Integration",
+      "type": "Health / Fitness",
+      "what": "Pull your health metrics, recovery scores, and daily stats directly into your morning briefing.",
+      "source": "Twitter (OpenClaw showcase)"
+    },
+    {
+      "name": "OpenAlgo",
+      "type": "Trading / Finance",
+      "what": "Automate trading workflows and financial automations through OpenClaw.",
+      "url": "https://x.com/marketcallsHQ",
+      "source": "Twitter (@marketcallsHQ)"
+    },
+    {
+      "name": "tldraw Integration",
+      "type": "Productivity / Diagrams",
+      "what": "Let your OpenClaw agent create and edit diagrams and visual workflows.",
+      "source": "Twitter (@0xSammy ClawIndex roundup)"
+    },
+    {
+      "name": "Linear Integration",
+      "type": "Project Management",
+      "what": "Manage Linear issues, create tasks, and clean up your project boards through chat.",
+      "source": "Twitter (OpenClaw showcase)"
+    },
+    {
+      "name": "Fastmail",
+      "type": "Email",
+      "what": "Connect Fastmail to OpenClaw for email management (alternative to Gmail/gog).",
+      "source": "Twitter (@steipete)"
+    },
+    {
+      "name": "Streamclaw",
+      "type": "Streaming / Media",
+      "what": "Agentic streaming capabilities — agents that can stream content/data.",
+      "source": "Twitter (@0xSammy ClawIndex roundup)"
+    },
+    {
+      "name": "Lobster.cash (Crossmint x Visa)",
+      "type": "Crypto / Payments",
+      "what": "Crypto payment infrastructure built on OpenClaw — Crossmint + Visa integration.",
+      "source": "Twitter (@0xSammy ClawIndex roundup)"
+    },
+    {
+      "name": "ClawIndex",
+      "type": "Directory",
+      "what": "The ecosystem directory for OpenClaw — 245+ projects, tools, and protocols building on OpenClaw.",
+      "url": "https://clawindex.org",
+      "source": "Twitter (@0xSammy)"
+    }
+  ],
+
+  "official_integrations": {
+    "source": "openclaw.ai homepage",
+    "messaging": ["WhatsApp", "Telegram", "Discord", "Slack", "Signal", "iMessage"],
+    "productivity": ["Gmail", "Google Calendar", "Notion", "Obsidian", "Apple Notes", "Apple Reminders", "Things 3", "Trello"],
+    "development": ["GitHub", "Browser automation", "Shell commands", "File system"],
+    "media": ["Spotify"],
+    "smart_home": ["Hue (Phillips)", "Homey"],
+    "other": ["Twitter/X", "1Password"]
+  },
+
+  "real_showcase_examples": [
+    {
+      "title": "Full site rebuild from phone",
+      "quote": "Rebuilt my entire site via Telegram while watching Netflix in bed. Notion → Astro, 18 posts migrated, DNS moved to Cloudflare. Never opened my laptop.",
+      "category": "Development / Business"
+    },
+    {
+      "title": "Business ops automation",
+      "quote": "Less than 24 hours in: cleaned up Linear issues, wrote email follow-ups, opened 3 PRs, prospected new signups.",
+      "category": "Business Ops"
+    },
+    {
+      "title": "Morning executive briefing",
+      "quote": "Morning daily brief: weather, weekly objectives, health stats, meetings agenda, key reminders, trending topics, stuff I should read, a relevant quote from my books.",
+      "category": "Executive Productivity"
+    },
+    {
+      "title": "Pre-meeting research",
+      "quote": "Researches people before meetings and creates briefing docs.",
+      "category": "Sales / Business"
+    },
+    {
+      "title": "Invoice creation",
+      "quote": "Creates invoices and summarizes work beautifully.",
+      "category": "Finance / Admin"
+    },
+    {
+      "title": "AI calendar management",
+      "quote": "Timeblocks tasks in my calendar based on importance and urgency. Manages calendar conflicts autonomously.",
+      "category": "Executive Productivity"
+    },
+    {
+      "title": "Business idea research",
+      "quote": "Spawns background sub-agents to research business ideas.",
+      "category": "Strategy / Research"
+    },
+    {
+      "title": "Full smart home + health + comms",
+      "quote": "Built a website from my phone in minutes and connected WHOOP to quickly check my metrics and daily habits — on a Raspberry Pi.",
+      "category": "Personal Productivity"
+    },
+    {
+      "title": "Gmail + calendar morning rollup",
+      "quote": "Creates a rollup in the morning so you can get an overview of any calendar events or emails you received overnight. Set how often it runs, how many events/emails to show.",
+      "category": "Executive Productivity"
+    },
+    {
+      "title": "Automated deployment debugging",
+      "quote": "Got BigC to check a Railway deployment — builds failed — BigC reviewed the logs, identified root cause (incorrect build commands), updated configs automatically.",
+      "category": "Development / IT"
+    }
+  ],
+
+  "hardware_options": [
+    {
+      "name": "Mac mini M4",
+      "cost": "~R15,000",
+      "power": "6W",
+      "notes": "Best for SA. Load shedding resistant with UPS. Full privacy. Native OpenClaw install.",
+      "recommended": true
+    },
+    {
+      "name": "Mac mini M4 Pro",
+      "cost": "~R25,000",
+      "power": "10W",
+      "notes": "Overkill for OpenClaw alone, but future-proofs for local AI models (Ollama)."
+    },
+    {
+      "name": "Raspberry Pi 5",
+      "cost": "~R2,500",
+      "power": "5W",
+      "notes": "Ultra low cost hardware option. Community confirmed working. Very power efficient.",
+      "community_quote": "I just finished setting up OpenClaw on my Raspberry Pi with Cloudflare — feels magical."
+    },
+    {
+      "name": "Any VPS (cloud)",
+      "cost": "R0-R300/month",
+      "power": "N/A",
+      "notes": "No hardware needed. Best for those without load shedding concerns or wanting zero upfront cost."
+    }
+  ],
+
+  "twitter_accounts_to_follow": [
+    { "handle": "@openclaw", "why": "Official account. Release notes, community." },
+    { "handle": "@steipete", "why": "Peter Steinberger — creator of OpenClaw. Ships constantly." },
+    { "handle": "@milesdeutscher", "why": "Best OpenClaw toolkit threads. Practical tips." },
+    { "handle": "@0xSammy", "why": "Weekly ClawIndex roundups — best way to track the ecosystem." }
+  ]
+}
