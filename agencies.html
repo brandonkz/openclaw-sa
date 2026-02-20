@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Agents South Africa — Find an Agency or Get Set Up | AgentSorted</title>
+  <meta name="description" content="Find a South African AI agency to set up your AI agents — or let us do it for you. Compare SA-based AI implementation specialists.">
+  <link rel="canonical" href="https://agentsorted.co.za/agencies.html">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    /* ── Hero ── */
+    .page-hero { padding: 80px 0 64px; border-bottom: 1px solid var(--mid); }
+    .page-hero h1 { font-size: 3rem; font-weight: 900; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 16px; max-width: 700px; }
+    .page-hero p { font-size: 1rem; color: var(--text2); max-width: 560px; line-height: 1.8; }
+
+    /* ── Featured service (Brandon) ── */
+    .featured-service { background: var(--black); color: white; padding: 64px 0; }
+    .fs-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .fs-eyebrow { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: #555; margin-bottom: 16px; }
+    .fs-title { font-size: 2.2rem; font-weight: 900; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 20px; }
+    .fs-desc { font-size: 0.9rem; color: #999; line-height: 1.8; margin-bottom: 32px; }
+    .fs-list { list-style: none; margin-bottom: 36px; }
+    .fs-list li { font-size: 0.875rem; color: #ccc; padding: 10px 0; border-bottom: 1px solid #1a1a1a; display: flex; align-items: flex-start; gap: 12px; }
+    .fs-list li::before { content: '✓'; color: #10b981; font-weight: 900; flex-shrink: 0; margin-top: 1px; }
+    .fs-price-card { background: #111; border: 1px solid #222; padding: 32px; }
+    .fpc-label { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #555; margin-bottom: 20px; }
+    .price-row { display: flex; justify-content: space-between; align-items: baseline; padding: 14px 0; border-bottom: 1px solid #1a1a1a; }
+    .price-row:last-of-type { border-bottom: none; }
+    .pr-name { font-size: 0.85rem; font-weight: 700; color: #e5e5e5; }
+    .pr-sub { font-size: 0.72rem; color: #555; margin-top: 3px; }
+    .pr-price { font-size: 1rem; font-weight: 900; color: white; white-space: nowrap; }
+    .btn-white-outline { border: 1px solid white; color: white; padding: 13px 26px; font-size: 0.85rem; font-weight: 700; display: inline-block; transition: all 0.15s; letter-spacing: 0.02em; margin-top: 28px; }
+    .btn-white-outline:hover { background: white; color: black; }
+
+    /* ── Filter bar ── */
+    .filter-bar { padding: 28px 0; border-bottom: 1px solid var(--mid); display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .filter-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text3); margin-right: 4px; }
+    .filter-btn { padding: 7px 16px; font-size: 0.78rem; font-weight: 600; border: 1px solid var(--mid); background: white; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .filter-btn:hover, .filter-btn.active { background: var(--black); color: white; border-color: var(--black); }
+
+    /* ── Agency grid ── */
+    .agency-section { padding: 64px 0; }
+    .agency-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--mid); border: 1px solid var(--mid); margin-top: 40px; }
+    .agency-card { background: white; padding: 32px; transition: background 0.2s; }
+    .agency-card:hover { background: var(--gray); }
+    .ac-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px; }
+    .ac-name { font-size: 1.05rem; font-weight: 900; letter-spacing: -0.01em; }
+    .ac-location { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text3); margin-top: 4px; }
+    .ac-badge { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; padding: 4px 10px; border: 1px solid var(--mid); color: var(--text3); white-space: nowrap; }
+    .ac-badge.verified { border-color: var(--black); color: var(--black); }
+    .ac-desc { font-size: 0.825rem; color: var(--text2); line-height: 1.7; margin-bottom: 20px; }
+    .ac-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; }
+    .ac-tag { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; padding: 3px 8px; background: var(--gray); color: var(--text2); }
+    .ac-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 16px; border-top: 1px solid var(--mid); }
+    .ac-price { font-size: 0.78rem; font-weight: 700; color: var(--text); }
+    .ac-price span { color: var(--text3); font-weight: 500; }
+    .ac-link { font-size: 0.78rem; font-weight: 700; border-bottom: 1px solid var(--mid); padding-bottom: 1px; }
+    .ac-link:hover { border-color: var(--black); }
+
+    /* ── Submit CTA ── */
+    .submit-section { padding: 64px 0; border-top: 1px solid var(--mid); }
+    .submit-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .submit-form { display: flex; flex-direction: column; gap: 12px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .form-input { border: 1px solid var(--mid); padding: 12px 14px; font-size: 0.875rem; font-family: inherit; outline: none; transition: border-color 0.15s; }
+    .form-input:focus { border-color: var(--black); }
+    .form-input.full { grid-column: 1 / -1; }
+    .form-textarea { border: 1px solid var(--mid); padding: 12px 14px; font-size: 0.875rem; font-family: inherit; outline: none; resize: vertical; min-height: 100px; transition: border-color 0.15s; }
+    .form-textarea:focus { border-color: var(--black); }
+
+    @media (max-width: 768px) {
+      .page-hero h1 { font-size: 2rem; }
+      .fs-inner { grid-template-columns: 1fr; gap: 40px; }
+      .agency-grid { grid-template-columns: 1fr; }
+      .submit-inner { grid-template-columns: 1fr; gap: 40px; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="/" class="brand">
+          <div class="brand-logo">🦞</div>
+          <div>
+            <div class="brand-name">AgentSorted</div>
+            <div class="brand-sub">AI Agents for SA</div>
+          </div>
+        </a>
+        <nav class="header-nav">
+          <a href="/use-cases.html" class="nav-link">Use Cases</a>
+          <a href="/agencies.html" class="nav-link" style="color:var(--black);font-weight:700;">Agencies</a>
+          <a href="/blog/index.html" class="nav-link">Blog</a>
+          <a href="https://openclaw.ai" class="nav-link" target="_blank" rel="noopener">OpenClaw ↗</a>
+        </nav>
+        <div class="header-right">
+          <a href="#get-started" class="nav-cta">Get Set Up</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page hero -->
+  <div class="page-hero">
+    <div class="container">
+      <div class="s-eyebrow">🇿🇦 South Africa</div>
+      <h1>Find an AI agent specialist.<br>Or let us do it for you.</h1>
+      <p>A curated directory of South African agencies and freelancers who implement AI agents for local businesses. All vetted. All SA-based.</p>
+    </div>
+  </div>
+
+  <!-- Featured: AgentSorted setup service -->
+  <section class="featured-service" id="get-started">
+    <div class="container">
+      <div class="fs-inner">
+        <div>
+          <div class="fs-eyebrow">⭐ Featured Service</div>
+          <h2 class="fs-title">We'll set it up for you.</h2>
+          <p class="fs-desc">Don't want to spend a weekend configuring servers and prompts? We run OpenClaw ourselves across 5 SA websites. We know exactly what works — and what doesn't. Let us build your automations while you focus on your business.</p>
+          <ul class="fs-list">
+            <li>Full OpenClaw setup on your Mac mini or cloud VPS</li>
+            <li>Custom automations built for your specific business and industry</li>
+            <li>WhatsApp or Telegram integration — control everything from your phone</li>
+            <li>3 months of support included — we fix issues as they arise</li>
+            <li>Full handover: you'll understand exactly what's running and why</li>
+          </ul>
+          <a href="mailto:brandon@agentsorted.co.za?subject=OpenClaw Setup Enquiry" class="btn-white-outline">Get in touch →</a>
+        </div>
+        <div>
+          <div class="fs-price-card">
+            <div class="fpc-label">Pricing</div>
+            <div class="price-row">
+              <div>
+                <div class="pr-name">Starter Setup</div>
+                <div class="pr-sub">1–3 automations, Mac mini or VPS, Telegram/WhatsApp</div>
+              </div>
+              <div class="pr-price">R4,500</div>
+            </div>
+            <div class="price-row">
+              <div>
+                <div class="pr-name">Business Setup</div>
+                <div class="pr-sub">5–10 automations, full cron schedule, reporting dashboard</div>
+              </div>
+              <div class="pr-price">R9,500</div>
+            </div>
+            <div class="price-row">
+              <div>
+                <div class="pr-name">Monthly Retainer</div>
+                <div class="pr-sub">Maintenance, new automations, priority support</div>
+              </div>
+              <div class="pr-price">R1,200<span style="font-size:0.7rem;font-weight:500;color:#555">/mo</span></div>
+            </div>
+            <div class="price-row">
+              <div>
+                <div class="pr-name">Industry Packs</div>
+                <div class="pr-sub">Pre-built automations for estate agents, law firms, agencies</div>
+              </div>
+              <div class="pr-price">Coming soon</div>
+            </div>
+            <a href="mailto:brandon@agentsorted.co.za?subject=OpenClaw Setup Enquiry" class="btn-white-outline" style="display:block;text-align:center;">Get a free quote →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Agency directory -->
+  <section class="agency-section">
+    <div class="container">
+      <div class="s-eyebrow">Directory</div>
+      <h2 class="s-title">SA AI Agencies</h2>
+      <p class="s-sub">Independent listings. Not paid placements. Focused on agencies building real AI agent implementations for South African businesses.</p>
+
+      <div class="filter-bar">
+        <span class="filter-label">Filter:</span>
+        <button class="filter-btn active" onclick="filterAgencies('all', this)">All</button>
+        <button class="filter-btn" onclick="filterAgencies('openclaw', this)">OpenClaw</button>
+        <button class="filter-btn" onclick="filterAgencies('automation', this)">Automation</button>
+        <button class="filter-btn" onclick="filterAgencies('enterprise', this)">Enterprise</button>
+        <button class="filter-btn" onclick="filterAgencies('freelancer', this)">Freelancer</button>
+      </div>
+
+      <div class="agency-grid" id="agencyGrid">
+
+        <div class="agency-card" data-tags="openclaw automation freelancer">
+          <div class="ac-top">
+            <div>
+              <div class="ac-name">AgentSorted</div>
+              <div class="ac-location">📍 Cape Town</div>
+            </div>
+            <div class="ac-badge verified">⭐ Verified</div>
+          </div>
+          <div class="ac-desc">OpenClaw specialist running AI agents across 5 live SA websites. Custom automations for content, reporting, data tracking, and social media. Plain-English explanations — no tech jargon.</div>
+          <div class="ac-tags">
+            <span class="ac-tag">OpenClaw</span>
+            <span class="ac-tag">Content</span>
+            <span class="ac-tag">Reporting</span>
+            <span class="ac-tag">WhatsApp</span>
+            <span class="ac-tag">Small Business</span>
+          </div>
+          <div class="ac-footer">
+            <div class="ac-price">From R4,500 <span>once-off</span></div>
+            <a href="#get-started" class="ac-link">Get a quote →</a>
+          </div>
+        </div>
+
+        <div class="agency-card" data-tags="automation enterprise">
+          <div class="ac-top">
+            <div>
+              <div class="ac-name">Autoflow AI</div>
+              <div class="ac-location">📍 South Africa</div>
+            </div>
+            <div class="ac-badge">Listed</div>
+          </div>
+          <div class="ac-desc">SA's self-described leading AI automation agency. Builds custom workflow automations — CRM systems, sales funnels, autonomous agents, chatbots, voice agents, and dynamic websites.</div>
+          <div class="ac-tags">
+            <span class="ac-tag">Automation</span>
+            <span class="ac-tag">CRM</span>
+            <span class="ac-tag">Chatbots</span>
+            <span class="ac-tag">Voice Agents</span>
+          </div>
+          <div class="ac-footer">
+            <div class="ac-price">Custom pricing</div>
+            <a href="https://autoflowai.co.za" target="_blank" rel="noopener" class="ac-link">Visit site →</a>
+          </div>
+        </div>
+
+        <div class="agency-card" data-tags="automation enterprise">
+          <div class="ac-top">
+            <div>
+              <div class="ac-name">AI Agency South Africa</div>
+              <div class="ac-location">📍 South Africa</div>
+            </div>
+            <div class="ac-badge">Listed</div>
+          </div>
+          <div class="ac-desc">Focused on AI agents for sales automation — lead generation, follow-ups, and conversion automation for SA businesses. Specialises in sales funnel AI.</div>
+          <div class="ac-tags">
+            <span class="ac-tag">Sales AI</span>
+            <span class="ac-tag">Lead Gen</span>
+            <span class="ac-tag">Automation</span>
+          </div>
+          <div class="ac-footer">
+            <div class="ac-price">Custom pricing</div>
+            <a href="https://aiagencysouthafrica.co.za" target="_blank" rel="noopener" class="ac-link">Visit site →</a>
+          </div>
+        </div>
+
+        <div class="agency-card" data-tags="enterprise">
+          <div class="ac-top">
+            <div>
+              <div class="ac-name">DVT (DVT.co.za)</div>
+              <div class="ac-location">📍 Johannesburg + Cape Town</div>
+            </div>
+            <div class="ac-badge">Enterprise</div>
+          </div>
+          <div class="ac-desc">Established SA tech company offering enterprise AI solutions — Databricks AI platform consolidation, AI-powered search (Algolia), and large-scale ML implementations for corporates.</div>
+          <div class="ac-tags">
+            <span class="ac-tag">Enterprise</span>
+            <span class="ac-tag">ML/Data</span>
+            <span class="ac-tag">Databricks</span>
+            <span class="ac-tag">Large Teams</span>
+          </div>
+          <div class="ac-footer">
+            <div class="ac-price">Enterprise pricing</div>
+            <a href="https://dvt.co.za/services/ai-solutions" target="_blank" rel="noopener" class="ac-link">Visit site →</a>
+          </div>
+        </div>
+
+        <div class="agency-card" data-tags="enterprise automation">
+          <div class="ac-top">
+            <div>
+              <div class="ac-name">BlueLabel Telecoms</div>
+              <div class="ac-location">📍 Johannesburg</div>
+            </div>
+            <div class="ac-badge">Enterprise</div>
+          </div>
+          <div class="ac-desc">AI consulting and process automation for mid-to-large SA businesses. Clients report 50% reduction in dispatch calls and task completion times dropping from 40 min to 10 min.</div>
+          <div class="ac-tags">
+            <span class="ac-tag">Process Automation</span>
+            <span class="ac-tag">AI Consulting</span>
+            <span class="ac-tag">Operations</span>
+          </div>
+          <div class="ac-footer">
+            <div class="ac-price">Enterprise pricing</div>
+            <a href="https://clutch.co/za/developers/artificial-intelligence" target="_blank" rel="noopener" class="ac-link">View reviews →</a>
+          </div>
+        </div>
+
+        <!-- Submit card -->
+        <div class="agency-card" style="background:var(--gray);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;min-height:240px;">
+          <div style="font-size:2rem;margin-bottom:16px;">+</div>
+          <div style="font-weight:800;margin-bottom:8px;">List your agency</div>
+          <div style="font-size:0.8rem;color:var(--text2);margin-bottom:20px;max-width:240px;line-height:1.6;">Running AI agents for SA businesses? Get listed for free.</div>
+          <a href="#submit" class="btn-black">Submit listing →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Submit form -->
+  <section class="submit-section" id="submit">
+    <div class="container">
+      <div class="submit-inner">
+        <div>
+          <div class="s-eyebrow">Get Listed</div>
+          <h2 class="s-title">Are you an SA AI specialist?</h2>
+          <p style="font-size:0.9rem;color:var(--text2);line-height:1.8;margin-bottom:20px;">Submit your agency or freelance profile. Listings are free. We review within 48 hours and prioritise those with verifiable SA clients and projects.</p>
+          <p style="font-size:0.8rem;color:var(--text3);line-height:1.7;">We're especially looking for: OpenClaw specialists, WhatsApp automation builders, industry-specific AI implementers (property, legal, accounting, retail).</p>
+        </div>
+        <form class="submit-form" onsubmit="return handleSubmit(event)">
+          <div class="form-row">
+            <input class="form-input" type="text" placeholder="Agency / Name" required>
+            <input class="form-input" type="text" placeholder="City">
+          </div>
+          <input class="form-input full" type="url" placeholder="Website URL" required>
+          <input class="form-input full" type="email" placeholder="Contact email" required>
+          <textarea class="form-textarea" placeholder="What do you do? Industries, tools, typical project size…" required></textarea>
+          <button type="submit" class="btn-black" style="align-self:flex-start;border:none;cursor:pointer;padding:13px 26px;font-family:inherit;font-size:0.85rem;font-weight:700;">Submit listing →</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">🦞 AgentSorted</div>
+        <div class="footer-links">
+          <a href="/blog/index.html">Blog</a>
+          <a href="/agencies.html">Agencies</a>
+          <a href="https://openclaw.ai" target="_blank" rel="noopener">OpenClaw ↗</a>
+        </div>
+        <div class="footer-copy">Independent resource. Not affiliated with OpenClaw or OpenAI.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function filterAgencies(tag, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.agency-card').forEach(card => {
+        if (tag === 'all' || (card.dataset.tags || '').includes(tag)) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    function handleSubmit(e) {
+      e.preventDefault();
+      e.target.innerHTML = '<p style="font-weight:700;font-size:1rem;">✅ Submission received. We\'ll review within 48 hours.</p>';
+      return false;
+    }
+  </script>
+</body>
+</html>
