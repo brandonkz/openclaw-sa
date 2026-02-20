@@ -1,0 +1,127 @@
+{
+  "last_updated": "2026-02-20",
+  "source": "Twitter @AlexFinn, YouTube, ucstrategies.com, gauraw.com, robertheubanks.substack.com",
+  "profile": {
+    "twitter": "@AlexFinn",
+    "role": "CEO, Creator Buddy (AI content tool)",
+    "openclaw_usage": "210+ hours in one month",
+    "claim": "More OpenClaw usage than anyone on Earth",
+    "influence": "Viral tweet caused Mac mini shortages globally (6-week delivery times)",
+    "podcast": "This Week in Startups ep. 2247",
+    "youtube_video": "The only OpenClaw video you'll ever need — setup, use cases, why VPSs suck, security"
+  },
+
+  "headline_quote": "The single most important thing you can be doing right at this moment in time is to download and learn OpenClaw. Your entire lineage will thank you.",
+
+  "hardware_recommendation": {
+    "verdict": "Mac mini. Not VPS.",
+    "key_quote": "If you run it on a VPS, you're getting like 20% of the power.",
+    "reasons": [
+      "Data stays on your machine — VPS = data center has admin-level access to your life",
+      "Mac Secure Enclave + FileVault = hardware security you can't replicate on VPS",
+      "3-4W idle — runs 24/7 for about $15/year in electricity",
+      "iMessage integration only works on macOS",
+      "The entire community troubleshoots around Mac mini — you find help faster",
+      "165,000+ GitHub stars — all guides and tutorials built around Mac mini"
+    ],
+    "models": [
+      {
+        "model": "Mac mini M4 16GB",
+        "price_usd": 599,
+        "price_zar": "~R10,500",
+        "verdict": "Sweet spot. Best for most people.",
+        "notes": "Cloud API workloads don't need more RAM. Start here."
+      },
+      {
+        "model": "Mac mini M4 Pro 24GB",
+        "price_usd": 1399,
+        "price_zar": "~R25,000",
+        "verdict": "Good if you want small local AI models too.",
+        "notes": "Future-proofing. Not necessary to start."
+      },
+      {
+        "model": "Mac mini M4 Pro 48GB+",
+        "price_usd": 2299,
+        "price_zar": "~R41,000",
+        "verdict": "For running large models (32B+) locally.",
+        "notes": "Cuts cloud API costs entirely. Endgame setup."
+      }
+    ]
+  },
+
+  "6_use_cases": [
+    {
+      "number": 1,
+      "title": "Second Brain via text message",
+      "description": "Text your bot from Telegram, iMessage, or Discord: 'remember this', 'save this link', 'book recommendation'. OpenClaw stores it all. Search it instantly.",
+      "tools": ["Telegram", "iMessage", "Next.js (for search UI)"],
+      "example": "'Remind me to read a book about local LLMs' → search 'local LLMs' later to pull up every relevant note"
+    },
+    {
+      "number": 2,
+      "title": "Custom Morning Brief (automatic, daily)",
+      "description": "Every morning at 8am, bot sends a personalised report to your phone: biggest AI news overnight, fresh video/content ideas with full scripts, your to-do list for today, and what the agent can do for you today.",
+      "tools": ["Telegram", "Brave Search / Exa.ai", "Cron"],
+      "example": "Wake up to a Telegram message with your entire day laid out — including tasks your bot can handle while you sleep"
+    },
+    {
+      "number": 3,
+      "title": "Content Factory (multi-agent pipeline)",
+      "description": "Three specialised agents in Discord channels: Agent 1 (research) finds trending topics + competitor analysis. Agent 2 (writing) turns best idea into full script. Agent 3 (visuals) generates thumbnails.",
+      "tools": ["Discord", "Local image model or DALL-E", "Multiple OpenClaw sessions"],
+      "example": "Full YouTube video — research, script, thumbnail — produced automatically every morning"
+    },
+    {
+      "number": 4,
+      "title": "Last 30 Days — business research skill",
+      "description": "Scans Reddit and X for what people are saying about your topic or industry in the last 30 days. Finds pain points, trending questions, content gaps. Alex credits this to 'Matt Van Horde'.",
+      "tools": ["Last30Days skill (available on ClawHub)", "Brave Search"],
+      "note": "This skill is already installed in the AgentSorted OpenClaw instance",
+      "example": "'What are SA business owners complaining about on Reddit this month?' → full report in minutes"
+    },
+    {
+      "number": 5,
+      "title": "Automated deal/lead prospecting",
+      "description": "Agent proactively scans for new signups, leads, or opportunities and sends personalised follow-up drafts or actual messages.",
+      "tools": ["Gmail via gog skill", "CRM webhooks", "Cron"],
+      "example": "New signup hits your database → agent drafts personalised outreach → queued for your review"
+    },
+    {
+      "number": 6,
+      "title": "Full site/project rebuild from your phone",
+      "description": "Give a high-level instruction like 'migrate my Notion blog to Astro' via Telegram while doing something else. Agent executes entirely — migrating content, updating DNS, pushing to GitHub.",
+      "tools": ["GitHub skill", "Cloudflare", "Telegram"],
+      "example": "Rebuilt entire site via Telegram while watching Netflix. Notion → Astro, 18 posts migrated, DNS moved. Never opened laptop."
+    }
+  ],
+
+  "recommended_tools_stack": {
+    "password_manager": ["Bitwarden (free, open-source)", "1Password", "Apple Keychain (Mac-only)"],
+    "web_search": ["Brave Search API (default, free tier)", "Exa.ai (better semantic search)", "Perplexity (alternative)"],
+    "messaging": ["Telegram (easiest setup, recommended first)", "iMessage (Mac-only, powerful)", "Discord (for multi-agent setups)"],
+    "remote_access": ["Tailscale (secure, free for personal use — access Mac mini from anywhere)"],
+    "ai_models_cheap": {
+      "note": "Alex has a 'How to Run OpenClaw for Dirt Cheap' YouTube video",
+      "strategy": "Route tasks by complexity — use Gemini Flash for simple cron jobs, Claude Sonnet for complex tasks, Claude Opus only when needed",
+      "rough_cost": "$5-15/month for most users"
+    },
+    "backup": ["GitHub (workspace/code)", "Google Drive (data + memory files)"]
+  },
+
+  "security_warnings": [
+    "Never expose your OpenClaw gateway to the public internet",
+    "Use Tailscale for remote access instead of port forwarding",
+    "Store API keys in a password manager, not plain text files",
+    "VPS setups require extra hardening — one misconfigured port = full exposure",
+    "Local Mac mini is inherently more secure than any cloud option"
+  ],
+
+  "content_angles_for_agentsorted": [
+    "Alex Finn's 6 use cases — SA context version",
+    "Mac mini buying guide for SA (iStore prices, takealot, where to get one)",
+    "Why the whole world is buying Mac minis right now",
+    "The 'run it cheap' guide — model routing by task type",
+    "Tailscale setup for SA users (access your Mac mini from anywhere)",
+    "The Second Brain setup — step by step for SA professionals"
+  ]
+}

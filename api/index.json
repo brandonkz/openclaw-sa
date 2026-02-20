@@ -1,0 +1,11 @@
+{
+  "name": "AgentSorted API",
+  "version": "v1",
+  "endpoints": {
+    "/api/tools.json": "Hosting options, AI models, messaging platforms, skills ecosystem, cost comparison",
+    "/api/ecosystem.json": "Community tools + OpenClaw ecosystem highlights",
+    "/api/alex-finn.json": "Alex Finn recommendations (hardware + use cases)",
+    "/api/agencies.json": "SA AI agencies directory"
+  },
+  "updated": "2026-02-20"
+}

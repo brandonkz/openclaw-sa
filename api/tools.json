@@ -1,0 +1,247 @@
+{
+  "last_updated": "2026-02-20",
+  "summary": "OpenClaw ecosystem research for AgentSorted content and tools pages",
+
+  "hosting_options": [
+    {
+      "name": "Oracle Cloud Always Free",
+      "slug": "oracle-cloud",
+      "cost": "$0/month",
+      "cost_rand": "R0/month",
+      "difficulty": "medium",
+      "setup": "manual",
+      "specs": "4 ARM CPUs, 24GB RAM, 200GB storage",
+      "bonus": "Can run local AI models (Ollama) for completely free AI",
+      "notes": "Community top pick for free tier. Sign-up can be finicky, capacity sometimes limited in some regions.",
+      "official_guide": "https://docs.openclaw.ai/platforms/oracle",
+      "recommended_for": "Technical users who want zero running costs"
+    },
+    {
+      "name": "Hetzner VPS",
+      "slug": "hetzner",
+      "cost": "$4-6/month",
+      "cost_rand": "~R80-110/month",
+      "difficulty": "medium",
+      "setup": "docker",
+      "specs": "1 vCPU, 2GB RAM (more than enough)",
+      "bonus": "Community favourite. Reliable, fast, cheap.",
+      "notes": "Most popular choice in the OpenClaw community. Docker setup with guide.",
+      "official_guide": "https://docs.openclaw.ai/install/hetzner",
+      "recommended_for": "Most users — best price/performance/reliability"
+    },
+    {
+      "name": "Railway",
+      "slug": "railway",
+      "cost": "$5-10/month",
+      "cost_rand": "~R90-180/month",
+      "difficulty": "easy",
+      "setup": "one-click + browser",
+      "specs": "Auto-scales",
+      "bonus": "One-click deploy, no Docker knowledge needed",
+      "notes": "Easiest setup of all options. Great for non-technical users.",
+      "official_guide": "https://docs.openclaw.ai/install/railway",
+      "recommended_for": "Non-technical users who want cloud setup with minimal hassle"
+    },
+    {
+      "name": "Northflank",
+      "slug": "northflank",
+      "cost": "$5-10/month",
+      "cost_rand": "~R90-180/month",
+      "difficulty": "easy",
+      "setup": "one-click + browser",
+      "specs": "Auto-scales",
+      "bonus": "One-click deploy, browser-based setup",
+      "notes": "Similar to Railway, slightly more enterprise-focused.",
+      "official_guide": "https://docs.openclaw.ai/install/northflank",
+      "recommended_for": "Non-technical business users"
+    },
+    {
+      "name": "Ampere.sh",
+      "slug": "ampere",
+      "cost": "$15-20/month",
+      "cost_rand": "~R280-370/month",
+      "difficulty": "easy",
+      "setup": "one-click",
+      "specs": "Optimised for OpenClaw",
+      "bonus": "Built specifically for OpenClaw. Includes AI credits.",
+      "notes": "Most premium hosted option. Has affiliate program — 30% recurring commission.",
+      "affiliate_link": "https://ampere.sh",
+      "affiliate_commission": "30% recurring",
+      "official_guide": "https://ampere.sh",
+      "recommended_for": "Users who want a fully managed, hassle-free experience"
+    },
+    {
+      "name": "DigitalOcean",
+      "slug": "digitalocean",
+      "cost": "$6-12/month",
+      "cost_rand": "~R110-220/month",
+      "difficulty": "easy",
+      "setup": "1-click deploy",
+      "specs": "1GB-2GB RAM droplets",
+      "bonus": "1-click hardened security image. Very reliable.",
+      "notes": "Good balance of ease and control. Trusted enterprise brand.",
+      "official_guide": "https://docs.openclaw.ai/install/digitalocean",
+      "recommended_for": "Users who want reliability and easy setup"
+    },
+    {
+      "name": "Hostinger VPS",
+      "slug": "hostinger",
+      "cost": "$5-8/month",
+      "cost_rand": "~R90-150/month",
+      "difficulty": "easy",
+      "setup": "1-click Docker template",
+      "specs": "1GB RAM",
+      "bonus": "Docker template pre-configured. Often has discount codes.",
+      "notes": "Good entry-level option. Regular promotional pricing available.",
+      "official_guide": "https://www.hostinger.com/vps/openclaw-hosting",
+      "recommended_for": "Budget-conscious users who still want managed setup"
+    },
+    {
+      "name": "Mac mini (local)",
+      "slug": "mac-mini",
+      "cost": "R15,000 once-off",
+      "cost_rand": "~R400/month amortised over 3 years",
+      "difficulty": "easy",
+      "setup": "native installer",
+      "specs": "M4: 10-core CPU, 16GB unified memory",
+      "bonus": "No internet dependency. Works during load shedding (with UPS). Full local privacy.",
+      "notes": "Best for SA context: power outages, data privacy, no rand exchange rate exposure. Uses ~6W power.",
+      "recommended_for": "SA businesses prioritising reliability, privacy, and local data"
+    },
+    {
+      "name": "Fly.io",
+      "slug": "flyio",
+      "cost": "$3-8/month",
+      "cost_rand": "~R55-150/month",
+      "difficulty": "medium",
+      "setup": "cli",
+      "specs": "256MB-1GB RAM",
+      "bonus": "Global edge network. Low latency from SA.",
+      "notes": "Has a free allowance. CLI-based setup requires some technical knowledge.",
+      "official_guide": "https://docs.openclaw.ai/install/fly",
+      "recommended_for": "Developers who want low cost + global infrastructure"
+    }
+  ],
+
+  "ai_models": [
+    {
+      "name": "Claude Sonnet",
+      "provider": "Anthropic",
+      "cost_per_month_typical": "$5-15",
+      "best_for": "General tasks, writing, analysis",
+      "notes": "Current default in most OpenClaw setups. Best balance of intelligence and cost."
+    },
+    {
+      "name": "Claude Opus",
+      "provider": "Anthropic",
+      "cost_per_month_typical": "$15-50",
+      "best_for": "Complex reasoning, research tasks",
+      "notes": "Most capable but more expensive. Worth it for complex automations."
+    },
+    {
+      "name": "GPT-4o",
+      "provider": "OpenAI",
+      "cost_per_month_typical": "$5-20",
+      "best_for": "General tasks, strong at coding",
+      "notes": "Good alternative to Claude. Strong coding and structured output."
+    },
+    {
+      "name": "Gemini 2.0 Flash",
+      "provider": "Google",
+      "cost_per_month_typical": "$1-5",
+      "best_for": "High-volume tasks, cost-sensitive workloads",
+      "notes": "Very cheap. Great for high-frequency cron jobs that don't need top intelligence."
+    },
+    {
+      "name": "Ollama (local models)",
+      "provider": "Meta / open-source",
+      "cost_per_month_typical": "$0",
+      "best_for": "Privacy-sensitive tasks, zero cost operation",
+      "notes": "Runs completely locally on Oracle Cloud free tier or Mac mini. No API costs. Needs decent hardware."
+    }
+  ],
+
+  "messaging_platforms": [
+    { "name": "Telegram", "difficulty": "easy", "notes": "Easiest setup. Create a bot token, done. Most popular choice." },
+    { "name": "WhatsApp", "difficulty": "medium", "notes": "Scan QR code to link. Extremely useful for SA businesses — WhatsApp is dominant here." },
+    { "name": "Discord", "difficulty": "medium", "notes": "Great for team use. Set up in a private server." },
+    { "name": "Slack", "difficulty": "medium", "notes": "Best for enterprise/corporate environments." },
+    { "name": "iMessage", "difficulty": "hard", "notes": "macOS only. Native Apple Messages integration." },
+    { "name": "Signal", "difficulty": "hard", "notes": "Most private option. signal-cli setup required." },
+    { "name": "Google Chat", "difficulty": "medium", "notes": "Good for Google Workspace businesses." }
+  ],
+
+  "skills_ecosystem": {
+    "total_skills": 3286,
+    "total_downloads": "1.5M+",
+    "categories": [
+      { "name": "AI/ML", "count": 1588 },
+      { "name": "Utility", "count": 1520 },
+      { "name": "Development", "count": 976 },
+      { "name": "Productivity", "count": 822 }
+    ],
+    "notable_skills": [
+      { "name": "Google Workspace (gog)", "category": "Productivity", "what": "Gmail, Calendar, Drive, Contacts, Docs, Sheets" },
+      { "name": "Notion", "category": "Productivity", "what": "Create and manage Notion pages and databases" },
+      { "name": "GitHub", "category": "Development", "what": "Issues, PRs, CI runs, API queries" },
+      { "name": "Weather", "category": "Utility", "what": "Current weather and forecasts via Open-Meteo" },
+      { "name": "Summarize", "category": "Utility", "what": "Summarize URLs, podcasts, YouTube videos, local files" },
+      { "name": "Whisper API", "category": "AI/ML", "what": "Transcribe audio via OpenAI Whisper" },
+      { "name": "Image Gen", "category": "AI/ML", "what": "Generate images via OpenAI Images API" },
+      { "name": "Google Analytics", "category": "Productivity", "what": "GA4 reports, sessions, users, conversions" },
+      { "name": "Healthcheck", "category": "Utility", "what": "Security hardening and risk assessment" },
+      { "name": "TikTok Marketing", "category": "Productivity", "what": "Automate TikTok slideshow marketing" }
+    ]
+  },
+
+  "real_world_use_cases": [
+    {
+      "industry": "Content / Affiliate Sites",
+      "automations": ["SEO blog writing + publishing", "Analytics reporting", "Social media content generation", "Live odds/data updates", "Reddit opportunity scanning"],
+      "time_saved_weekly": "15-20 hours",
+      "monthly_cost": "R750"
+    },
+    {
+      "industry": "Estate Agents",
+      "automations": ["Property24 listing monitor", "Client follow-up drafter", "Weekly market report", "WhatsApp lead responses"],
+      "time_saved_weekly": "8 hours",
+      "monthly_cost": "R300-600"
+    },
+    {
+      "industry": "Law Firms",
+      "automations": ["Contract summarisation", "Deadline tracking", "Standard correspondence drafting", "Matter status updates"],
+      "time_saved_weekly": "10 hours",
+      "monthly_cost": "R300-600"
+    },
+    {
+      "industry": "Accounting / Bookkeeping",
+      "automations": ["SARS deadline tracker", "Monthly report generation", "Client reminders", "Invoice drafting"],
+      "time_saved_weekly": "6 hours",
+      "monthly_cost": "R300-600"
+    },
+    {
+      "industry": "Marketing Agencies",
+      "automations": ["Client content generation", "Analytics reports every Monday", "Competitor monitoring", "Campaign performance alerts"],
+      "time_saved_weekly": "15 hours",
+      "monthly_cost": "R300-600"
+    },
+    {
+      "industry": "eCommerce / Retail",
+      "automations": ["Takealot competitor price monitoring", "Stock level alerts", "WhatsApp customer query responses", "Weekly sales summaries"],
+      "time_saved_weekly": "12 hours",
+      "monthly_cost": "R300-600"
+    }
+  ],
+
+  "cost_comparison": {
+    "title": "AI Agent vs Human Staff",
+    "agent_monthly": "R750",
+    "agent_hours_equivalent": "40+ hours/week",
+    "comparison": [
+      { "role": "Part-time content writer", "cost_monthly": "R5,000-8,000", "hours": "20 hrs/week" },
+      { "role": "Social media manager", "cost_monthly": "R8,000-15,000", "hours": "Full-time" },
+      { "role": "Junior data analyst", "cost_monthly": "R12,000-18,000", "hours": "Full-time" },
+      { "role": "AI Agent (OpenClaw)", "cost_monthly": "R300-750", "hours": "24/7 always-on" }
+    ]
+  }
+}

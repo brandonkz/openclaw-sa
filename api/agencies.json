@@ -1,0 +1,46 @@
+{
+  "updated": "2026-02-20",
+  "source": "AgentSorted seed list",
+  "agencies": [
+    {
+      "name": "AgentSorted",
+      "location": "Cape Town",
+      "tags": ["openclaw", "automation", "freelancer"],
+      "website": "https://agentsorted.co.za",
+      "notes": "OpenClaw specialist running AI agents across 5 live SA sites. Custom automations for content, reporting, data tracking, and social media.",
+      "verified": true
+    },
+    {
+      "name": "Autoflow AI",
+      "location": "South Africa",
+      "tags": ["automation", "enterprise"],
+      "website": "https://autoflowai.co.za",
+      "notes": "Custom workflow automations — CRM, sales funnels, autonomous agents, chatbots, voice agents, dynamic websites.",
+      "verified": false
+    },
+    {
+      "name": "AI Agency South Africa",
+      "location": "South Africa",
+      "tags": ["automation", "sales"],
+      "website": "https://aiagencysouthafrica.co.za",
+      "notes": "AI agents for sales automation — lead generation, follow-ups, conversion workflows.",
+      "verified": false
+    },
+    {
+      "name": "DVT",
+      "location": "Johannesburg + Cape Town",
+      "tags": ["enterprise", "ml", "data"],
+      "website": "https://dvt.co.za/services/ai-solutions",
+      "notes": "Enterprise AI consulting, Databricks, AI search and ML implementations.",
+      "verified": false
+    },
+    {
+      "name": "BlueLabel Telecoms",
+      "location": "Johannesburg",
+      "tags": ["enterprise", "automation"],
+      "website": "https://clutch.co/za/developers/artificial-intelligence",
+      "notes": "AI consulting and process automation for mid-to-large SA businesses.",
+      "verified": false
+    }
+  ]
+}
